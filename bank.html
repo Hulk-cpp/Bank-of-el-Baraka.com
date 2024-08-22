@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank El Baraka</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bank El Baraka</h1>
+        <div id="main-menu">
+            <h2>Do you have an Account?</h2>
+            <button onclick="showLogin()">Yes</button>
+            <button onclick="showSignUp()">No</button>
+        </div>
+
+        <!-- Login Form -->
+        <div id="login-form" class="form" style="display: none;">
+            <h2>Login</h2>
+            <label for="loginName">Name:</label>
+            <input type="text" id="loginName" placeholder="Enter your name">
+            <label for="loginNickname">Nickname:</label>
+            <input type="text" id="loginNickname" placeholder="Enter your nickname">
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" placeholder="Enter your password">
+            <button onclick="login()">Login</button>
+            <button onclick="showMainMenu()">Back</button>
+            <p id="loginMessage"></p>
+        </div>
+
+        <!-- Sign Up Form -->
+        <div id="signup-form" class="form" style="display: none;">
+            <h2>Sign Up</h2>
+            <label for="signupName">Name:</label>
+            <input type="text" id="signupName" placeholder="Enter your name">
+            <label for="signupNickname">Nickname:</label>
+            <input type="text" id="signupNickname" placeholder="Enter your nickname">
+            <label for="signupAge">Age:</label>
+            <input type="number" id="signupAge" placeholder="Enter your age">
+            <label for="signupPassword">Password:</label>
+            <input type="password" id="signupPassword" placeholder="Enter your password">
+            <label for="signupPasswordConfirm">Confirm Password:</label>
+            <input type="password" id="signupPasswordConfirm" placeholder="Confirm your password">
+            <button onclick="signUp()">Sign Up</button>
+            <button onclick="showMainMenu()">Back</button>
+            <p id="signupMessage"></p>
+        </div>
+
+        <!-- Account Operations -->
+        <div id="account-menu" class="form" style="display: none;">
+            <h2>Account Menu</h2>
+            <button onclick="checkBalance()">Check Balance</button>
+            <button onclick="showDepositForm()">Deposit</button>
+            <button onclick="showWithdrawForm()">Withdraw</button>
+            <button onclick="showTransferForm()">Transfer</button>
+            <button onclick="logout()">Logout</button>
+            <p id="accountMessage"></p>
+        </div>
+
+        <!-- Deposit Form -->
+        <div id="deposit-form" class="form" style="display: none;">
+            <h2>Deposit</h2>
+            <label for="depositAmount">Amount:</label>
+            <input type="number" id="depositAmount" placeholder="Enter amount to deposit">
+            <button onclick="deposit()">Deposit</button>
+            <button onclick="showAccountMenu()">Back</button>
+        </div>
+
+        <!-- Withdraw Form -->
+        <div id="withdraw-form" class="form" style="display: none;">
+            <h2>Withdraw</h2>
+            <label for="withdrawAmount">Amount:</label>
+            <input type="number" id="withdrawAmount" placeholder="Enter amount to withdraw">
+            <button onclick="withdraw()">Withdraw</button>
+            <button onclick="showAccountMenu()">Back</button>
+        </div>
+
+        <!-- Transfer Form -->
+        <div id="transfer-form" class="form" style="display: none;">
+            <h2>Transfer</h2>
+            <label for="transferRecipient">Recipient Name:</label>
+            <input type="text" id="transferRecipient" placeholder="Enter recipient's name">
+            <label for="transferRecipientNickname">Recipient Nickname:</label>
+            <input type="text" id="transferRecipientNickname" placeholder="Enter recipient's nickname">
+            <label for="transferAmount">Amount:</label>
+            <input type="number" id="transferAmount" placeholder="Enter amount to transfer">
+            <button onclick="transfer()">Transfer</button>
+            <button onclick="showAccountMenu()">Back</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
